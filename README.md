@@ -23,18 +23,24 @@ to see all the images currently in docker
 ```sh
 docker ps -l
 ```
+
+The terminal will look something like this
+
+```sh
+PS C:\Users\Rajib> docker ps -l
+CONTAINER ID   IMAGE           COMMAND   CREATED       STATUS                      PORTS     NAMES
+56d90fc15d97   ubuntu:latest   "bash"    5 hours ago   Exited (0) 22 seconds ago             kind_cartwright
+```
+
 to save one image using a tag/name use commit using the container id
 
 ```sh
-docker commit [container id]
+docker commit kind_cartwright rajib-image
 ```
-to save it using a name do the following
-```sh
-docker tag [sha256 code] rajib-image
-```
+
 Check if they were saved properly or not
 ```sh
-docker images [see all the images]
+docker images
 ```
 
 Run the saved image to continue your work
