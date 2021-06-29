@@ -4,6 +4,9 @@ Will Contain docker commands that I use
 
 ## Set up Ubuntu docker image on windows
 
+* [Steps from Ubuntu website](https://ubuntu.com/tutorials/windows-ubuntu-hyperv-containers#1-overview)
+* [Youtube tutorial](https://www.youtube.com/watch?v=eZpLjKv9xvA)
+
 ## After set up
 ```sh
 Docker ps
@@ -49,10 +52,14 @@ Run the saved image to continue your work
 docker run -ti rajib-image bash
 ```
 
+## Running things in docker
+
+
 
 ## Development
 
 
-## License
+## Data flow - Jenkins and Docker
 
+Application build by developer ------> commit to GIT --------> Jenkins for CI ------> Jenkins will build JS App and create Docker Image -------> it will push to private Docker Repository -----> Dev Server will pull images
 MIT
