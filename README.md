@@ -218,6 +218,25 @@ run it . ti stands for interactive mode
 
 docker run --rm -ti example/nanoer
 
+example 3 of docker file. Starts from the previous example
+
+write this in docker file
+
+FROM example/nanoer
+ADD notes.txt /notes.txt
+CMD "/bin/nano" "/notex.txt"
+
+
+build it 
+docker build -t example/notes .
+
+run it
+
+docker run --rm -ti example/notes
+
+more reference > https://docs.docker.com/engine/reference/builder/
+
+
 
 ## Development
 
