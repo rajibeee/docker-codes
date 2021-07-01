@@ -171,9 +171,54 @@ docker tag rajib-image:latest rajibdey/test:first
 then push using
 ```sh
 docker push rajibdey/test:first
-```sh
+```
 It is available here
 https://hub.docker.com/repository/docker/rajibdey/test
+
+## Docker file
+
+create a docker file 
+
+create a new file
+nano dockerfile
+
+write this inside
+
+FROM busybox
+RUN echo "buliding simple docker image."
+CMD echo "hello container"
+
+
+build it
+
+docker build -t hello .
+
+
+run it
+
+docker run --rm hello
+
+
+example 2 of docker file
+
+write this in dockerfile
+
+
+FROM debian:sid
+RUN apt-get -y update
+RUN apt-get install nano
+CMD ["/bin/nano", "/tmp/notes"]
+
+build it
+
+docker build -t example/nanoern .
+
+
+run it . ti stands for interactive mode
+
+docker run --rm -ti example/nanoer
+
+
 ## Development
 
 
