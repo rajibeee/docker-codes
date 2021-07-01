@@ -142,9 +142,38 @@ remove image by name
 docker rmi my-image
 
 
-## Volumes
+## Docker registries
 
+search for docker images
 
+```sh
+docker search ubuntu
+
+```
+
+log in on docker
+
+```sh
+docker login
+```
+
+pull an image
+
+```sh
+docker pull ubuntu
+```
+
+push an existing image to docker huh. Need to tag it first
+Here, tagging the image "rajib-latest" to username "rajibdey" and folder "test"
+```sh
+docker tag rajib-image:latest rajibdey/test:first
+```
+then push using
+```sh
+docker push rajibdey/test:first
+```sh
+It is available here
+https://hub.docker.com/repository/docker/rajibdey/test
 ## Development
 
 
