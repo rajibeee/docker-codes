@@ -53,6 +53,48 @@ docker run -ti rajib-image bash
 ```
 
 ## Running things in docker
+```sh
+docker run
+```
+docker containers have names, if you do not give it one it will create one
+
+if you want to destroy a container after you exit
+```sh
+docker run --rm -ti
+```
+give it a command --
+```sh
+docker run -ti ubuntu bash -c "sleep 3;echo all done"
+```
+
+leaving things running in a container . -d for detached
+
+```sh
+docker run -d -ti ubuntu bash
+```
+to jump into that container -- do
+```sh
+docker ps
+```
+it will give you a name, then if the name of the container is suspicious_williams
+
+```sh
+docker attach suspicious_wiliams
+```
+execute a new process in another container
+```sh
+docker exec -ti suspicious_williams bash
+```
+
+
+
+## Running processes in containers
+
+## Manage containers
+
+## Exposing ports
+
+## Container networking
 
 
 
