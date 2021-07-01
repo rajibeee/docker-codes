@@ -101,6 +101,45 @@ see all the virtual network running
 docker network ls
 ```
 
+--- 
+
+
+make a new network
+
+```sh
+docker network create learning
+```
+put a machine in that network
+
+docker run -rm -ti --net learning --name catserver ubuntu:14.04 bash
+
+test it using 
+
+ping catserver
+
+crate a dog-server
+
+docker run -rm -ti --net learning --name dogserver ubuntu:14.04 bash
+
+now you can ping between dogserver and catserver
+
+
+docker network create catsonly
+
+put cat machine into cat network
+docker network connect catsonly catserver
+
+## Managing images
+see all the images
+
+docker images
+
+remove image by image id
+docker rmi bd717kg23442
+
+remove image by name
+
+docker rmi my-image
 ## Development
 
 
