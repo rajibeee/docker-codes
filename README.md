@@ -96,7 +96,10 @@ docker exec -ti suspicious_williams bash
 
 ## Container networking
 
-
+see all the virtual network running
+```sh
+docker network ls
+```
 
 ## Development
 
