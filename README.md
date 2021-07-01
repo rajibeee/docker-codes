@@ -231,9 +231,9 @@ build it
 docker build -t example/notes .
 
 run it
-
+```sh
 docker run --rm -ti example/notes
-
+```
 more reference > https://docs.docker.com/engine/reference/builder/
 
 
